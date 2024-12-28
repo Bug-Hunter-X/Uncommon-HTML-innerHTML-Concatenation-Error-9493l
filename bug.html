@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Incorrect way to replace innerHTML with a variable
+    var newText = "<h1>New Heading</h1>";
+    document.getElementById("myDiv").innerHTML = newText;
+
+    //This is to show that the text is changed
+    var newText2 = "<p>New paragraph</p>";
+    document.getElementById("myDiv").innerHTML += newText2;
+
+    //This is to show that the text is changed
+    var newText3 = "<p>Another paragraph</p>";
+    document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + newText3;
+  </script>
+</body>
+</html>
