@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Correct way to replace innerHTML using DOM manipulation
+    var newText = document.createElement("h1");
+    newText.textContent = "New Heading";
+    document.getElementById("myDiv").appendChild(newText);
+
+    var newParagraph = document.createElement("p");
+    newParagraph.textContent = "New paragraph";
+    document.getElementById("myDiv").appendChild(newParagraph);
+
+    var anotherParagraph = document.createElement("p");
+    anotherParagraph.textContent = "Another paragraph";
+    document.getElementById("myDiv").appendChild(anotherParagraph);
+  </script>
+</body>
+</html>
